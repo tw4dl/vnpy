@@ -1,0 +1,11 @@
+version: '2'
+services:
+  vnpy:
+    image: dliu/vnpy
+    environment:
+      DISPLAY: $ENV_DISPLAY
+    volumes:
+      - ./CTP_connect.json:/vnpy/vn.trader/ctpGateway/CTP_connect.json
+      - /tmp/.X11-unix:/tmp/.X11-unix
+#      - $HOME/.Xauthority:/.Xauthority
+
